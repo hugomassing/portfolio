@@ -1,25 +1,49 @@
 import React from 'react';
-import logo from './logo.svg';
+import styled from 'styled-components';
+import Header from './components/header';
+import Work from './components/work';
 import './App.css';
+
+const H1 = styled.h1`
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 36px;
+    letter-spacing: 0.08em;
+`
+
+const Section = styled.section`
+    margin-bottom: 60px;
+    position: relative;
+`
+
+const Background = styled.div`
+  background-color: #3a3a3a;
+  position: absolute;
+  width: 100%;
+  height: 110%; 
+  transform: scaleX(2) rotate(8deg);  
+  z-index: -10;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Section>
+       <Header />
+      </Section>
+      <Section>
+        <Background />
+        <H1>
+          Work
+        </H1>
+        <Work />
+      </Section>
+      <Section>
+        <H1>
+          Projects
+        </H1>
+      </Section>
+    </>
   );
 }
 
