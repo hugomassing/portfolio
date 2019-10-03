@@ -63,20 +63,20 @@ const jobs = [{
         title: 'Co-founder',
         company: 'qatataq - Paris (75)',
         date: 'november 2015 - now',
-        description: 'qatataq is a talent agency created in 2015. After multiples events organized in France, we are now dedicated to promote young talents and electronic music in France.\
-        - Artists Management and booking for multiple acts : Maazel, Sombre, Akalex.\
-        - Development of a webradio (fm.qatataq.com) in React/Redux.\
-        - Creation of the websites of the artists (maazelmusic.com) in NextJS.\
-        - Weekly mixes of artists from all over the world livestreamed on our facebook page.\
-        - Content creation (artworks, visuals, videos) & social media management.'
+        description: 'qatataq is a talent agency created in 2015. After multiples events organized in France, we are now dedicated to promote young talents and electronic music in France.' +
+        '- Artists Management and booking for multiple acts : Maazel, Sombre, Akalex.' +
+        '- Development of a webradio (fm.qatataq.com) in React/Redux.' +
+        '- Creation of the websites of the artists (maazelmusic.com) in NextJS.' +
+        '- Weekly mixes of artists from all over the world livestreamed on our facebook page.' +
+        '- Content creation (artworks, visuals, videos) & social media management.'
     }, {
         img: '',
         title: 'Front-end developer',
         company: 'VerticalStation - Paris (75)',
         date: 'june 2018 - august 2019',
-        description:'Leading web media for brand content in France, 100% video, 100% vertical, reaching 15+ million people on Facebook & Instagram with more than 10 brands (minutebuzz, Hero, Fraiches, Superbon ...)\
-        Working on building and maintaining a 100% JavaScript, SAAS web app.\
-        The app helps creators post their content to multiple social networks - facebook, instagram, twitter and youtube - and then manages usage data and social insights from already published content.'
+        description:'Leading web media for brand content in France, 100% video, 100% vertical, reaching 15+ million people on Facebook & Instagram with more than 10 brands (minutebuzz, Hero, Fraiches, Superbon ...)' +
+        'Working on building and maintaining a 100% JavaScript, SAAS web app.' +
+        'The app helps creators post their content to multiple social networks - facebook, instagram, twitter and youtube - and then manages usage data and social insights from already published content.'
     }, {
         img: '',
         title: 'Front-end developer',
@@ -88,7 +88,6 @@ const jobs = [{
 
 const Work = () => {
     const [highlightedItem, setHighlightedItem] = useState(null);
-    console.log(highlightedItem);
     return(
         <Jobs>
             {jobs.map((job, index)  => (<Job key={`jobs_${index}`} onMouseEnter={() => setHighlightedItem(index)} onMouseLeave={() => setHighlightedItem(null)}>
