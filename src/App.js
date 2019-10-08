@@ -48,9 +48,13 @@ const Global = createGlobalStyle`
     background: #292929;
     color: #E3E3E3;
     letter-spacing: 0.06em;
-    margin: 0 10% 0 10%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+  html, body {
+    width: 100%;
+    margin:0;
+    padding:0;
   }
 `
 
@@ -62,7 +66,7 @@ function App() {
        <Header />
       </Section>
       <Section>
-        <Background />
+        {false && <Background />}
         <H1 gradient={red}>
           Work
         </H1>

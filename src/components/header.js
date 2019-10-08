@@ -7,7 +7,6 @@ const TextWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100px;
 `
 
 const Title = styled.span`
@@ -46,6 +45,7 @@ const Menu = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 0;
 `
 
 const MenuItem = styled.ul`

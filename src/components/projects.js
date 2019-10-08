@@ -39,7 +39,6 @@ const ProjectsList = styled.div`
 
 const Project = styled.div`
     position: relative;
-    width: 100%;
     text-align: left;
     display: flex;
     align-items: center;
@@ -57,6 +56,10 @@ const Project = styled.div`
             color: white;
             text-decoration: underline;
         }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
     }
 `
 
