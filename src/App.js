@@ -28,8 +28,12 @@ const green = '#00FB46 0%, #FFE600 100%';
 const blue = '#3200FB 0%, #DB00FF 100%';
 
 const Section = styled.section`
-  margin-bottom: 60px;
   position: relative;
+  margin: 0 10%;
+  margin-bottom: 60px;
+  @media (max-width: 768px) {
+        margin: 0 5%;
+    }
 `
 
 const Background = styled.div`

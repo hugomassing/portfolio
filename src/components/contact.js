@@ -25,23 +25,30 @@ const ContactItem = styled.div`
     font-weight: bold;  
 `
 
+const HideSmall = styled.span`
+  @media (max-width: 480px) {
+    display: none;
+  }
+`
+
+
 const Contact = () => {
     return(
         <ContactsContainer>
             <ContactItem>
-              <Img backgroundImage={'hey'} /> github.com/hugomassing
+              <Img backgroundImage={'hey'} /><HideSmall>github.com/</HideSmall>hugomassing
             </ContactItem>
             <ContactItem>
-              <Img backgroundImage={'hey'} /> twitter.com/SICARMY__
+              <Img backgroundImage={'hey'} /><HideSmall>twitter.com/</HideSmall>SICARMY__
             </ContactItem>
             <ContactItem>
-              <Img backgroundImage={'hey'} /> linkedin.com/in/hugomassing/
+              <Img backgroundImage={'hey'} /><HideSmall>linkedin.com/in/</HideSmall>hugomassing/
             </ContactItem>
             <ContactItem>
-              <Img backgroundImage={'hey'} /> contact@hugomassing.com
+              <Img backgroundImage={'hey'} />me@hugomassing.com
             </ContactItem>
             <ContactItem>
-              <Img backgroundImage={'hey'} /> download my resume
+              <Img backgroundImage={'hey'} /><HideSmall>download my </HideSmall>resume
             </ContactItem>
         </ContactsContainer>)}
 

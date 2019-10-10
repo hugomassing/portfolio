@@ -14,6 +14,7 @@ const redux = 'https://redux.js.org/';
 
 const ImgWrapper = styled.div`
     position: relative;
+    width: 30%;
     &:hover {
         img{
             transition: filter 0.3s ease-in-out;
@@ -24,10 +25,13 @@ const ImgWrapper = styled.div`
             display: block;
         }
     }
+    @media (max-width: 768px) {
+        width: 80%;
+    }
 `
 
 const Img = styled.img`
-    width: 400px;
+    width: 100%;
     float: right;
     filter: none;
 `
@@ -51,6 +55,7 @@ const Project = styled.div`
     }
     p {
         font-size: 20px;
+        line-height: 24px;
         white-space: pre-line;
         a:visited  {
             color: white;
@@ -60,11 +65,16 @@ const Project = styled.div`
 
     @media (max-width: 768px) {
         flex-direction: column;
+        text-align: center;
+        margin: 0;
     }
 `
 
 const Description = styled.div`
-    width: 50%;
+    width: 70%;
+    a {
+        color: #E3E3E3;
+    }
 `
 
 const Button = styled.button`

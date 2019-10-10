@@ -46,13 +46,15 @@ const Menu = styled.ul`
   flex-direction: row;
   justify-content: center;
   margin: 0;
+  padding: 0;
 `
 
-const MenuItem = styled.ul`
+const MenuItem = styled.li`
     margin: 10px 20px;
     font-weight: semi-bold;
     font-style: italic;
     font-size: 18px;
+    padding: 0;
 `
 const Jobs = styled.div`
     font-size: 18px;
