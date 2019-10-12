@@ -39,6 +39,7 @@ const Img = styled.img`
 const ProjectsList = styled.div`
     display: flex;
     flex-direction: column;
+    margin-left: 50px;
 `
 
 const Project = styled.div`
@@ -47,7 +48,7 @@ const Project = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 30px;
+    margin: 20px 0;
     h2 { 
         text-transform: uppercase;
         font-size: 24px;

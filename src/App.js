@@ -29,21 +29,25 @@ const blue = '#3200FB 0%, #DB00FF 100%';
 
 const Section = styled.section`
   position: relative;
-  margin: 0 10%;
-  margin-bottom: 60px;
+  margin: 100px 10%;
+  ::before {
+    display: ${props => props.background ? 'block' : 'none'};
+    content: '';
+    background-color: #3a3a3a;
+    position: absolute;
+    width: 100%;
+    height: 110%; 
+    top: ${props => props.right ? '0' : '-50px'};
+    transform: scaleX(2) rotate(${props => props.right ? '8deg' : '-8deg'});
+    z-index: -10;
+  }
   @media (max-width: 768px) {
-        margin: 0 5%;
-    }
+      margin: 0 5%;
+      ::before {
+        height: 100%;
+      }
+  }
 `
-
-const Background = styled.div`
-  background-color: #3a3a3a;
-  position: absolute;
-  width: 100%;
-  height: 110%; 
-  transform: scaleX(2) rotate(8deg);  
-  z-index: -10;
-`;
 
 const Global = createGlobalStyle`  
   body {
@@ -60,17 +64,23 @@ const Global = createGlobalStyle`
     margin:0;
     padding:0;
   }
+  #root {
+    overflow-x: hidden;
+  }
+`
+
+const HeaderSection = styled(Section)`
+  margin-top: 0;
 `
 
 function App() {
   return (
     <>
       <Global/>
-      <Section>
+      <HeaderSection>
        <Header />
-      </Section>
-      <Section>
-        {false && <Background />}
+      </HeaderSection>
+      <Section background right>
         <H1 gradient={red}>
           Work
         </H1>

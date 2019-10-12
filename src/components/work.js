@@ -18,7 +18,6 @@ const Jobs = styled.div`
 `
 const Job = styled.div`
   position: relative;
-  width: 100%; 
 `
 
 const Infos = styled.div`
@@ -45,7 +44,6 @@ const Img = styled.div`
 `
 const Resume = styled.div`
   margin-left: 20px;
-  width: 60%;
   p {
     margin: 2px 0;
     font-size: 20px;
